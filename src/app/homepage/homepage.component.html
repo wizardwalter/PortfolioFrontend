@@ -1,0 +1,241 @@
+<div id="whole-nav" class="navbar row d-flex justify-content-center">
+  <div class="col-4" id="nav-body">
+    <div class="row d-flex justify-content-around align-items-center">
+      <div class="col-2">
+        <button class="nav-buttons"><a href="#home-content">Home</a></button>
+      </div>
+      <div class="col-2">
+        <button class="nav-buttons"><a href="#projects">Projects</a></button>
+      </div>
+      <div class="col-2">
+        <button id="contact-me-button" class="nav-buttons">
+          <a href="#contactMe">Contact Me</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="background" class="container">
+  <div id="background2" class="container">
+    <div id="home-content" class="container">
+      <div id="main" class="row d-flex justify-content-center">
+        <div id="main" class="row d-flex justify-content-center">
+          <div class="col-9">
+            <img
+              class="animate__animated animate__jackInTheBox"
+              id="picofme"
+              src="https://res.cloudinary.com/walterscloudinary/image/upload/v1633995859/webPortfolio/pic_of_me_jtpbqo.png"
+            />
+          </div>
+          <div id="main" class="row d-flex justify-content-center">
+            <div class="col-9">
+              <p
+                id="welcome-paragraph"
+                class="animate__animated animate__fadeInUp"
+              >
+                Hello! My name is Walter Vannnoy, I grew up in a small town in
+                Connecticut named Tolland. I have been learning most modern
+                stacks to develop like the MEAN and MERN stacks. I have always
+                had a passion for computers and love building and debugging
+                code. With 2 years of earning professional certificates in
+                database structure, javascript and specific stacks I believe I
+                am ready to join the workforce as a professional developer.
+                <br>
+                <br>
+                My dream and why I am pursuing this career is “To become a senior
+                full stack developer so that when I become a penetration tester
+                I will be one step ahead as I will know the flaws in a
+                website/server”
+              </p>
+            </div>
+            <div id="main" class="row d-flex justify-content-center">
+              <div class="col-2">
+                <button id="home-button">
+                  <a href="#contactMe">Contact Me</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="services" class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-4">
+      <h1 id="services-header">Resume</h1>
+    </div>
+  </div>
+  <div id="services-row" class="row d-flex justify-content-center">
+    <div
+      class="
+        service-animations
+        col-12
+        d-flex
+        justify-content-center
+        align-items-center
+        hidden
+        animate__animated
+        yellow
+      "
+    >
+      <div class="row d-flex justify-content-center">
+       <a class="service-span" href="https://drive.google.com/file/d/1PXokZlUNkXeIGhjEeeO81cbWpWzCM27k/view?usp=sharing">Cover Letter</a>
+      </div>
+    </div>
+    <div
+      id="animate-1"
+      class="
+        service-animations
+        col-12
+        d-flex
+        justify-content-center
+        align-items-center
+        hidden
+        animate__animated
+        black
+      "
+    >
+      <div class="row d-flex justify-content-center">
+        <a class="service-span" href="https://drive.google.com/file/d/1W7-GergDwXnhjourp1ss1_HXfe-Qgvut/view?usp=sharing">Resume</a>
+      </div>
+    </div>
+    <!-- <div
+      id="animate-2"
+      class="
+        service-animations
+        col-12
+        d-flex
+        justify-content-center
+        align-items-center
+        hidden
+        animate__animated
+        yellow
+      "
+    >
+      <div>
+        <span class="service-span"
+          >Use most modern technologies to develop</span
+        >
+      </div>
+    </div>
+    <div
+      id="animate-3"
+      class="
+        service-animations
+        col-12
+        d-flex
+        justify-content-center
+        align-items-center
+        hidden
+        animate__animated
+        black
+      "
+    >
+      <div class="row d-flex justify-content-center">
+        <span class="service-span">Make application as secure as possible</span>
+      </div> -->
+    <!-- </div> -->
+  </div>
+</div>
+<div id="certificates" class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-2">
+      <h1 id="project-header">Certificates</h1>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-around animate__animated hidden2">
+    <div *ngFor="let cert of certs" class="col-4">
+      <div class="card" style="width: 18rem">
+        <img src="{{ cert.picture }}" class="card-img-top" style="height: 200px;" />
+        <div class="card-body">
+          <h5 class="card-title">{{ cert.title }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="projects" class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-2">
+      <h1 id="project-header">Projects</h1>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-around animate__animated hidden2">
+    <div *ngFor="let project of projects" class="col-4">
+      <div class="card" style="width: 18rem">
+        <img src="{{ project.picture }}" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ project.title }}</h5>
+          <p class="card-text">{{ project.description }}</p>
+          <a href="{{ project.link }}" class="btn btn-primary">{{
+            project.title
+          }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-2">
+      <h1 id="project-header">Websites</h1>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-around animate__animated hidden2">
+    <div *ngFor="let website of websites" class="col-4">
+      <div class="card" style="width: 18rem">
+        <img src="{{ website.picture }}" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">{{ website.title }}</h5>
+          <p class="card-text">{{ website.description }}</p>
+          <a href="{{ website.link }}" class="btn btn-primary">{{
+            website.title
+          }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="contactMe" class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-3">
+      <h1>Contact Me</h1>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-4">
+      <ul>
+        <li>
+          <i class="fa fa-envelope fa-7x"></i>
+          <span
+            ><a class="contact-span" href="mailto:waltervannoy@yahoo.com"
+              >waltervannoy@yahoo.com</a
+            ></span
+          >
+        </li>
+        <li>
+          <i class="fa fa-phone fa-7x"></i>
+          <span class="contact-span">(860)-268-7790</span>
+        </li>
+        <li>
+          <i class="fa fa-github fa-7x"></i>
+          <span
+            ><a class="contact-span" href="https://github.com/wizardwalter"
+              >wizardwalter</a
+            ></span
+          >
+        </li>
+        <li>
+          <i class="fa fa-linkedin"></i>
+          <span
+            ><a
+              class="contact-span"
+              href="https://www.linkedin.com/in/waltervannoy/"
+              >Walter Vannoy</a
+            ></span
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

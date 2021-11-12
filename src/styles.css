@@ -1,0 +1,29 @@
+
+body {
+  background: hsla(0, 0%, 37%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(0, 0%, 37%, 1) 0%,
+    hsla(59, 30%, 49%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(0, 0%, 37%, 1) 0%,
+    hsla(59, 30%, 49%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(0, 0%, 37%, 1) 0%,
+    hsla(59, 30%, 49%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#5E5E5E", endColorstr="#A4A358", GradientType=1 );
+  background-size: cover;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+@import '~animate.css/animate.min';
