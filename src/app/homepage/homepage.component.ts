@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../shared/user.service';
 
 
 @Component({
@@ -8,19 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public userService:UserService) { }
   projects = [];
   websites = [];
   certs =[];
+  isLogin : boolean;
+  currentUser;
   ngOnInit(): void {
+    this.isLogin = this.userService.getIsAuth();
+    this.currentUser = JSON.parse(localStorage.getItem('user'))
+    console.log(this.currentUser)
     document.addEventListener("DOMContentLoaded", function(){
       window.addEventListener('scroll', function() {
           if (window.scrollY > 275) {
             document.getElementById('whole-nav').classList.add('fixed-top');
-            document.getElementById('whole-nav').style.marginTop = '0';
           } else {
             document.getElementById('whole-nav').classList.remove('fixed-top');
-            document.getElementById('whole-nav').style.marginTop = '10';
           }
       });
     });
@@ -124,6 +128,10 @@ export class HomepageComponent implements OnInit {
         description: "Full responsive website I built and styled with help from a friend.",
         link:"https://k9-frontend.herokuapp.com/#/"
   })
+  }
+
+  logout(){
+    this.userService.logout()
   }
 
 }

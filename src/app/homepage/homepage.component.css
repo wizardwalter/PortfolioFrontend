@@ -24,10 +24,11 @@
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F9FAFB", endColorstr="#838383", GradientType=1 );
   z-index: 3;
   border: 0.01px solid rgb(28, 29, 39, 0.65);
-  border-radius: 25px;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   height: 70px;
-  width: 600px;
+  width: 100%;
+  margin-right: 0;
+  margin-left:0;
 }
 button {
   padding: 1.3em 1em;
@@ -56,17 +57,31 @@ button {
   transform: translateY(-1px);
  }
 
-/* #contact-me-button{
-  width: 100px;
-} */
+#login-button:hover{
+  background-color: rgb(10, 158, 10);
+  box-shadow: 0px 15px 20px rgb(80, 214, 80);
+  color: #000;
+  transform: translateY(-7px);
+}
+
+#sign-up-button:hover{
+  background-color: rgb(10, 158, 10);
+  box-shadow: 0px 15px 20px rgb(80, 214, 80);
+  color: #000;
+  transform: translateY(-7px);
+}
+
+.logout-button:hover{
+  background-color: rgb(206, 28, 28);
+  box-shadow: 0px 15px 20px rgb(221, 72, 84);
+  color: #000;
+  transform: translateY(-7px);
+}
+
 #top-nav {
   z-index: 2;
 }
-#top-col {
-  margin-right: 225px;
-  margin-bottom: 15px;
-  margin-top: 15px;
-}
+
 
 /* .col-2:hover{
   animation-name: bounce;
@@ -264,6 +279,12 @@ button {
 }
 /* end of projects */
 
+#contactMe{
+  background-color: #fff;
+  width: 940px;
+  border-radius: 25px;
+  margin-bottom: 30px;
+}
 ul{
   list-style: none;
 }

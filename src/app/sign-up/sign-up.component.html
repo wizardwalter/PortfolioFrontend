@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <form class="form-signin" #form='ngForm' (submit)="onSubmit(form)">
+    <div class="row d-flex justify-content-center">
+      <h2 class="form-signin-heading">Please Sign-Up</h2>
+      <input type="file" name="photo" ngModel
+          (input)="onChange(f.files[0])" #f #test>
+      <input class="form-control" type="email" placeholder="Email" name="email" ngModel form.email="ngModel"/>
+      <input class="form-control" type="text" placeholder="Name" name="name" ngModel form.name="ngModel"/>
+      <input class="form-control" type="password" placeholder="Password" name="password" ngModel form.password="ngModel"/>
+      <button type="submit">Login</button>
+    </div>
+  </form>
+</div>

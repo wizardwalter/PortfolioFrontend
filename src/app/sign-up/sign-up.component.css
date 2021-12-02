@@ -1,0 +1,77 @@
+.wrapper {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: rgb(56, 56, 56) 0px 20px 30px 10px;
+}
+.form-signin-heading {
+  margin-bottom: 30px;
+}
+.checkbox {
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.form-control:focus {
+  z-index: 2;
+}
+
+input[type="text"] {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+input[type="email"] {
+  margin-top: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+input[type="password"] {
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+button {
+  background-color: #eee;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 10em;
+  border-radius: 1rem;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+}
+
+button:active {
+  color: white;
+  box-shadow: 0 0.2rem #f1db15;
+  transform: translateY(0.2rem);
+}
+
+button:hover:not(:disabled) {
+  background: #f1db15;
+  color: white;
+}
+
+button:disabled {
+  cursor: auto;
+  color: grey;
+}
