@@ -22,9 +22,8 @@ export class ReviewsComponent implements OnInit {
     console.log('currentUser._id:',this.currentUser._id)
   }
   deleteReview(id){
-    this.reviewService.deleteReview(id).subscribe(async res=>{
-      await res;
-      await this.ngOnInit()
+    this.reviewService.deleteReview(id).subscribe(res=>{
+      window.location.reload();
     })
   }
 
