@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ReviewService } from '../shared/review.service';
 import { UserService } from '../shared/user.service';
 
@@ -9,7 +10,7 @@ import { UserService } from '../shared/user.service';
 })
 export class ReviewsComponent implements OnInit {
 
-  constructor(public userService: UserService, public reviewService: ReviewService) { }
+  constructor(public userService: UserService, public reviewService: ReviewService, public router: Router) { }
   reviews;
   currentUser;
   ngOnInit(): void {
@@ -21,8 +22,9 @@ export class ReviewsComponent implements OnInit {
     console.log('currentUser._id:',this.currentUser._id)
   }
   deleteReview(id){
-    this.reviewService.deleteReview(id).subscribe(res=>{
-      window.location.reload();
+    this.reviewService.deleteReview(id).subscribe(async res=>{
+      await res;
+      await this.router.navigateByUrl('/reviews');
     })
   }
 
