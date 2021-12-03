@@ -1,13 +1,45 @@
 <div class="wrapper">
-  <form class="form-signin" #form='ngForm' (submit)="onSubmit(form)">
+  <form class="form-signin" #form="ngForm" (submit)="onSubmit(form)">
     <div class="row d-flex justify-content-center">
+      <div class="col-12 d-flex justify-content-start">
+        <button routerLink="/" class="back btn btn-light">
+          <i class="fa fa-arrow-left"></i>
+        </button>
+      </div>
       <h2 class="form-signin-heading">Please Sign-Up</h2>
-      <input type="file" name="photo" ngModel
-          (input)="onChange(f.files[0])" #f #test>
-      <input class="form-control" type="email" placeholder="Email" name="email" ngModel form.email="ngModel"/>
-      <input class="form-control" type="text" placeholder="Name" name="name" ngModel form.name="ngModel"/>
-      <input class="form-control" type="password" placeholder="Password" name="password" ngModel form.password="ngModel"/>
-      <button type="submit">Login</button>
+      <input
+        type="file"
+        name="photo"
+        ngModel
+        (input)="onChange(f.files[0])"
+        #f
+        #test
+      />
+      <input
+        class="form-control"
+        type="email"
+        placeholder="Email"
+        name="email"
+        ngModel
+        form.email="ngModel"
+      />
+      <input
+        class="form-control"
+        type="text"
+        placeholder="Name"
+        name="name"
+        ngModel
+        form.name="ngModel"
+      />
+      <input
+        class="form-control"
+        type="password"
+        placeholder="Password"
+        name="password"
+        ngModel
+        form.password="ngModel"
+      />
+      <button class="submit" type="submit">Sign-Up</button>
     </div>
   </form>
 </div>

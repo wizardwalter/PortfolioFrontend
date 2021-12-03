@@ -25,8 +25,9 @@ export class ReviewService {
     return this.http.post(this.baseUrl + '/reviews/create', {text:form, userId: currentUser});
   };
 
-  editReview(id:any, userObj:any): Observable<any>{
-    return this.http.put(this.baseUrl + '/reviews/' + id, userObj)
+  editReview(id:any, text:any): Observable<any>{
+    console.log('text: ', text)
+    return this.http.put(this.baseUrl + '/reviews/' + id, {text:text})
   };
 
   deleteReview(id:any){

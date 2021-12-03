@@ -44,7 +44,7 @@
 	  border-top-right-radius: 0;
 	}
 
-  button {
+  .submit {
     background-color: #eee;
     border: none;
     padding: 1rem;
@@ -57,19 +57,32 @@
     cursor: pointer;
    }
 
-   button:active {
+   .submit:active {
     color: white;
     box-shadow: 0 0.2rem #f1db15;
     transform: translateY(0.2rem);
    }
 
-   button:hover:not(:disabled) {
+   .submit:hover:not(:disabled) {
     background: #f1db15;
     color: white;
 
    }
 
-   button:disabled {
+   .submit:disabled {
     cursor: auto;
     color: grey;
    }
+.btn{
+  border: 2px solid black;
+}
+   .fa-arrow-left{
+    transition: all 0.3s ease 0s;
+  }
+  .fa-arrow-left:hover{
+    transform: translateX(-7px);
+  }
+
+  .back{
+    margin-top: 6px;
+  }

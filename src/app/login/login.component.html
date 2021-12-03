@@ -1,10 +1,29 @@
 <div class="wrapper">
-  <form class="form-signin" #form='ngForm' (submit)="onSubmit(form)">
+  <form class="form-signin" #form="ngForm" (submit)="onSubmit(form)">
     <div class="row d-flex justify-content-center">
+      <div class="col-12 d-flex justify-content-start">
+        <button routerLink="/" class="back btn btn-light">
+          <i class="fa fa-arrow-left"></i>
+        </button>
+      </div>
       <h2 class="form-signin-heading">Please Login</h2>
-      <input class="form-control" type="email" placeholder="Email" name="email" ngModel form.email="ngModel"/>
-      <input class="form-control" type="password" placeholder="Password" name="password" ngModel form.password="ngModel"/>
-      <button type="submit">Login</button>
+      <input
+        class="form-control"
+        type="email"
+        placeholder="Email"
+        name="email"
+        ngModel
+        form.email="ngModel"
+      />
+      <input
+        class="form-control"
+        type="password"
+        placeholder="Password"
+        name="password"
+        ngModel
+        form.password="ngModel"
+      />
+      <button class="submit" type="submit">Login</button>
     </div>
   </form>
 </div>

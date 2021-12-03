@@ -41,3 +41,14 @@ h1{
 p{
   font-weight: 600;
 }
+
+.back{
+ margin-top: 10px;
+}
+
+.fa-arrow-left{
+  transition: all 0.3s ease 0s;
+}
+.fa-arrow-left:hover{
+  transform: translateX(-7px);
+}

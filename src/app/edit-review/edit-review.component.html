@@ -1,1 +1,30 @@
-<p>edit-review works!</p>
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 d-flex justify-content-start">
+     <button routerLink='/reviews' class="back btn btn-light">
+          <i class="fa fa-arrow-left"></i></button
+      >
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+      <span>Edit Review</span>
+    </div>
+    <form #form="ngForm" (submit)="onSubmit(form)">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 d-flex justify-content-center">
+          <textarea
+            type="textarea"
+            [(ngModel)]="review.text"
+            placeholder="Write a review.."
+            name="text"
+            ngModel
+            form.text="ngModel"
+          ></textarea>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+          <button class="submit" type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
