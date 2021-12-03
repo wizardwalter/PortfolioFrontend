@@ -10,7 +10,9 @@
       <h1>Reviews</h1>
     </div>
     <div class="col-12 d-flex justify-content-center">
-      <a href="/reviews/create"><button class="btn btn-lg btn-primary">Create New</button></a>
+      <button routerLink="/reviews/create" class="btn btn-lg btn-primary">
+        Create New
+      </button>
     </div>
     <div
       *ngFor="let r of reviews"
