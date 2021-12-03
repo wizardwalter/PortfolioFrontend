@@ -31,3 +31,13 @@
 h1{
   text-decoration: underline;
 }
+.comments{
+  background-color:hsla(55, 79%, 54%, .85);
+  height: 75px;
+ width: 85%;
+  margin: 25px;
+  border-radius: 25px;
+}
+p{
+  font-weight: 600;
+}

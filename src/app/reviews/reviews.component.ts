@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ReviewService } from '../shared/review.service';
+import { UserService } from '../shared/user.service';
 
 @Component({
   selector: 'app-reviews',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReviewsComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public userService: UserService, public reviewService: ReviewService) { }
+  reviews;
+  currentUser;
   ngOnInit(): void {
+    this.currentUser = JSON.parse(localStorage.getItem('user'))
+   this.reviewService.getReviews().subscribe(res=>{
+     console.log('comments',res['comments'][0].user)
+      this.reviews = res['comments'];
+    })
+    console.log('currentUser._id:',this.currentUser._id)
+  }
+  deleteReview(id){
+    this.reviewService.deleteReview(id).subscribe(res=>{
+      window.location.reload();
+    })
   }
 
 }

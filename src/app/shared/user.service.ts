@@ -108,6 +108,7 @@ export class UserService {
    clearAuthData(){
       localStorage.removeItem('token');
       localStorage.removeItem('expiration');
+      localStorage.removeItem('user');
     };
     private setAuthTimer(duration : number){
       this.tokenTimer = window.setTimeout(()=>{

@@ -1,1 +1,23 @@
-<p>new-review works!</p>
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 d-flex justify-content-center">
+      <span>New Review</span>
+    </div>
+    <form #form="ngForm" (submit)="onSubmit(form)">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 d-flex justify-content-center">
+          <textarea
+            type="textarea"
+            placeholder="Write a review.."
+            name="text"
+            ngModel
+            form.text="ngModel"
+          ></textarea>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+          <button type="submit">submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

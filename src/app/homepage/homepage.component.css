@@ -47,7 +47,7 @@ button {
  }
 
  button:hover {
-  background-color: hsla(55, 79%, 54%, 1);;
+  background-color: hsla(55, 79%, 54%, 1);
   box-shadow: 0px 15px 20px rgb(243, 255, 78);
   color: #000;
   transform: translateY(-7px);
