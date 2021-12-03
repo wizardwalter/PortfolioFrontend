@@ -9,7 +9,8 @@ import { User } from '../models/user';
 })
 export class UserService {
   constructor(public http: HttpClient, public router: Router) {}
-  baseUrl = 'http://localhost:3000';
+  baseUrl = 'https://myportfolio-backend101.herokuapp.com';
+  // baseUrl = 'http://localhost:3000'
   isAuthenticated = false;
   isLoading: boolean = false;
   // public currentUserSource = new ReplaySubject<User>(1);

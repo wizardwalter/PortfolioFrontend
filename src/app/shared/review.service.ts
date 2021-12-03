@@ -9,8 +9,8 @@ import { User } from '../models/user';
 })
 export class ReviewService {
   constructor(public http: HttpClient, public router: Router) {}
-  // baseUrl = 'https://k9cs-backend.herokuapp.com';
-  baseUrl = 'http://localhost:3000'
+   baseUrl = 'https://myportfolio-backend101.herokuapp.com';
+  // baseUrl = 'http://localhost:3000'
 
   getReviews() {
     return this.http.get(this.baseUrl + '/reviews');
