@@ -24,7 +24,7 @@ export class ReviewsComponent implements OnInit {
   deleteReview(id){
     this.reviewService.deleteReview(id).subscribe(async res=>{
       await res;
-      await this.router.navigateByUrl('/reviews');
+      await this.ngOnInit()
     })
   }
 
